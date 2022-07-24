@@ -64,21 +64,25 @@ void controleMotor(){
 
   // 1 0 0 0 0
   else if( (s[0] == HIGH) && (s[1] == LOW) && (s[2] == LOW) && (s[3] == LOW) && (s[4] == LOW)){
+    Serial.println("1 0 0 0 0");
     analogWrite(ENA, 100);
     analogWrite(ENB, 140);
   }
   // 1 1 0 0 0
   else if( (s[0] == HIGH) && (s[1] == HIGH) && (s[2] == LOW) && (s[3] == LOW) && (s[4] == LOW)){
+    Serial.println("1 1 0 0 0");
     analogWrite(ENA, 110);
     analogWrite(ENB, 140);
   }
   // 0 1 0 0 0
   else if((s[0] == LOW) && (s[1] == HIGH) && (s[2] == LOW) && (s[3] == LOW) && (s[4] == LOW)){
+    Serial.println("0 1 0 0 0");
     analogWrite(ENA, 120);
     analogWrite(ENB, 140);
   }
   // 0 1 1 0 0
   else if((s[0] == LOW) && (s[1] == HIGH) && (s[2] == HIGH) && (s[3] == LOW) && (s[4] == LOW)){
+    Serial.println("0 1 1 0 0");
     analogWrite(ENA, 130);
     analogWrite(ENB, 140);
   }
@@ -88,6 +92,7 @@ void controleMotor(){
   
   // 0 0 1 0 0 -- RETO -------------------------------------------
   else if((s[0] == LOW) && (s[1] == LOW) && (s[2] == HIGH) && (s[3] == LOW) && (s[4] == LOW)){
+    Serial.println("0 0 1 0 0");
     analogWrite(ENA, 140);
     analogWrite(ENB, 140);
   } // -------------------------------------------------------
@@ -98,23 +103,27 @@ void controleMotor(){
   // -- VIRAR PARA A DIREITA ---------------------------
   // 0 0 1 1 0
   else if( (s[0] == LOW) && (s[1] == LOW) && (s[2] == HIGH) && (s[3] == HIGH) && (s[4] == LOW)){
+    Serial.println("0 0 1 1 0");
     analogWrite(ENA, 140);
     analogWrite(ENB, 130);
   }
   // 0 0 0 1 0
   else if((s[0] == LOW) && (s[1] == LOW) && (s[2] == LOW) && (s[3] == HIGH) && (s[4] == LOW)){
+    Serial.println("0 0 0 1 0");
     analogWrite(ENA, 140);
     analogWrite(ENB, 120);
   }
   // 0 0 0 1 1
   else if((s[0] == LOW) && (s[1] == LOW) && (s[2] == LOW) && (s[3] == HIGH) && (s[4] == HIGH)){
+    Serial.println("0 0 0 1 1");
     analogWrite(ENA, 140);
     analogWrite(ENB, 110);
   }
   // 0 0 0 0 1
   else if((s[0] == LOW) && (s[1] == LOW) && (s[2] == LOW) && (s[3] == LOW) && (s[4] == HIGH)){
+    Serial.println("0 0 0 0 1");
     analogWrite(ENA, 140);
     analogWrite(ENB, 100);
   }
 
-  }
+}
